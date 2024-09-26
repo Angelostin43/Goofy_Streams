@@ -8,14 +8,9 @@ class Recomendaciones extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      c: 0,
-      ActivarRecomendacion: 0
+      ActivarRecomendacion: 0,
     };
   }
-
-  state = {
-    c: 0,
-  };
 
   AlternarReco = (index) => {
     this.setState({ ActivarRecomendacion: index });
@@ -25,83 +20,84 @@ class Recomendaciones extends Component {
     const ContenidoRecomendaciones = [
       <div className="Recomendaciones" key={1}>
         <div className="imagenContainer">
-          <img src="../img/oppenheimer.jpg" />
+          <img src="../img/oppenheimer.jpg" alt="Oppenheimer" />
           <Link to="/oppen">Comenzar a ver!</Link>
         </div>
         <div className="imagenContainer">
-          <img src="../img/FantasticosB.png" />
+          <img src="../img/FantasticosB.png" alt="Los Fantásticos" />
           <Link to="/fantasticos">Comenzar a ver!</Link>
         </div>
         <div className="imagenContainer">
-          <img src="../img/FnafBanner.png" />
+          <img src="../img/FnafBanner.png" alt="Five Nights at Freddy's" />
           <Link to="/five">Comenzar a ver!</Link>
         </div>
         <div className="imagenContainer">
-          <img src="../img/DragonBallSuperSuperHero.png" />
+          <img src="../img/DragonBallSuperSuperHero.png" alt="Dragon Ball Super: Super Hero" />
           <Link to="/dragonhero">Comenzar a ver!</Link>
         </div>
         <div className="imagenContainer">
-          <img src="../img/BetterCallSaul.jpg" />
+          <img src="../img/BetterCallSaul.jpg" alt="Better Call Saul" />
           <Link to="/bettercall">Comenzar a ver!</Link>
         </div>
         <div className="imagenContainer">
-          <img src="../img/Spiderman.jpg" />
+          <img src="../img/Spiderman.jpg" alt="Spider-Man" />
           <Link to="/spideracross">Comenzar a ver!</Link>
         </div>
       </div>,
       <div className="Recomendaciones" key={2}>
         <div className="imagenContainer">
-          <img src="../img/ElGatoConBotas.jpg" />
+          <img src="../img/ElGatoConBotas.jpg" alt="El Gato con Botas" />
           <Link to="/gatobotas">Comenzar a ver!</Link>
         </div>
         <div className="imagenContainer">
-          <img src="../img/Contrarreloj.jpg" />
+          <img src="../img/Contrarreloj.jpg" alt="Contrarreloj" />
           <Link to="/contrarreloj">Comenzar a ver!</Link>
         </div>
         <div className="imagenContainer">
-          <img src="../img/Chuky.jpg" />
+          <img src="../img/Chuky.jpg" alt="Chucky" />
           <Link to="/chuky">Comenzar a ver!</Link>
         </div>
         <div className="imagenContainer">
-          <img src="../img/Baki.jpg" />
+          <img src="../img/Baki.jpg" alt="Baki" />
           <Link to="/baki">Comenzar a ver!</Link>
         </div>
         <div className="imagenContainer">
-          <img src="../img/Meg2.jpg" />
+          <img src="../img/Meg2.jpg" alt="Meg 2" />
           <Link to="/mega2">Comenzar a ver!</Link>
         </div>
         <div className="imagenContainer">
-          <img src="../img/Regular_Show.webp" />
+          <img src="../img/Regular_Show.webp" alt="Regular Show" />
           <Link to="/unshowmas">Comenzar a ver!</Link>
         </div>
       </div>,
       <div className="Recomendaciones" key={3}>
         <div className="imagenContainer">
-          <img src="../img/VenomB.png" />
+          <img src="../img/VenomB.png" alt="Venom" />
           <Link to="/venom">Comenzar a ver!</Link>
         </div>
         <div className="imagenContainer">
-          <img src="../img/DragonBallZGods.png" />
+          <img src="../img/DragonBallZGods.png" alt="Dragon Ball Z: Battle of Gods" />
           <Link to="/dragongods">Comenzar a ver!</Link>
         </div>
         <div className="imagenContainer">
-          <img src="../img/La_Monja_2.png" />
+          <img src="../img/La_Monja_2.png" alt="La Monja 2" />
           <Link to="/monja2">Comenzar a ver!</Link>
         </div>
         <div className="imagenContainer">
-          <img src="../img/BreakingBad.jpg" />
+          <img src="../img/BreakingBad.jpg" alt="Breaking Bad" />
           <Link to="/breabad">Comenzar a ver!</Link>
         </div>
         <div className="imagenContainer">
-          <img src="../img/Narcos.jpg" />
+          <img src="../img/Narcos.jpg" alt="Narcos" />
           <Link to="/narcos">Comenzar a ver!</Link>
         </div>
         <div className="imagenContainer">
-          <img src="../img/DragonBallSuperBroly.jpg" />
+          <img src="../img/DragonBallSuperBroly.jpg" alt="Dragon Ball Super: Broly" />
           <Link to="/dragonbroly">Comenzar a ver!</Link>
         </div>
-      </div>
+      </div>,
     ];
+
     const indice = Math.floor(Math.random() * trailers.length);
     return (
       <div className="Recomendaciones">
@@ -111,39 +107,33 @@ class Recomendaciones extends Component {
             {ContenidoRecomendaciones[this.state.ActivarRecomendacion]}
             <aside id="CuadroDerecha">
               <video className="VideoTrailer" controls>
-                <source src={trailers[indice]} type="video/mp4"></source>
+                <source src={trailers[indice]} type="video/mp4" />
               </video>
-              <div class="DelaSemana">
-                <h1>
-                  Peliculas de la semana:
-                </h1>
+              <div className="DelaSemana">
+                <h1>Peliculas de la semana:</h1>
                 <ul>
                   <li><Link to="/dragongods"><img src="../img/Flecha_icono.png" alt="Flecha" /><span>Dragon Ball Z: Battle of Gods</span></Link></li>
                   <li><Link to="/monja2"><img src="../img/Flecha_icono.png" alt="Flecha" /><span>La Monja 2</span></Link></li>
-                  <li><Link to="/five"><img src="../img/Flecha_icono.png" alt="Flecha" />Five Night at Freddys</Link></li>
-                  <li><Link to="/oppen"><img src="../img/Flecha_icono.png" alt="Flecha" />Oppenheimer</Link></li>
+                  <li><Link to="/five"><img src="../img/Flecha_icono.png" alt="Flecha" /><span>Five Night at Freddy's</span></Link></li>
+                  <li><Link to="/oppen"><img src="../img/Flecha_icono.png" alt="Flecha" /><span>Oppenheimer</span></Link></li>
                 </ul>
               </div>
-              <div class="DelaSemana">
-                <h1>
-                  Series de la semana:
-                </h1>
+              <div className="DelaSemana">
+                <h1>Series de la semana:</h1>
                 <ul>
-                  <li><Link to="/breabad"><img src="../img/Flecha_icono.png" alt="Flecha" />Breaking bad</Link></li>
-                  <li><Link to="/narcos"><img src="../img/Flecha_icono.png" alt="Flecha" />Narcos</Link></li>
-                  <li><Link to="/chuky"><img src="../img/Flecha_icono.png" alt="Flecha" />Chuky</Link></li>
-                  <li><Link to="/bettercall"><img src="../img/Flecha_icono.png" alt="Flecha" />Better call saul</Link></li>
+                  <li><Link to="/breabad"><img src="../img/Flecha_icono.png" alt="Flecha" /><span>Breaking Bad</span></Link></li>
+                  <li><Link to="/narcos"><img src="../img/Flecha_icono.png" alt="Flecha" /><span>Narcos</span></Link></li>
+                  <li><Link to="/chuky"><img src="../img/Flecha_icono.png" alt="Flecha" /><span>Chuky</span></Link></li>
+                  <li><Link to="/bettercall"><img src="../img/Flecha_icono.png" alt="Flecha" /><span>Better Call Saul</span></Link></li>
                 </ul>
               </div>
-              <div class="DelaSemana">
-                <h1>
-                  Animes de la semana:
-                </h1>
+              <div className="DelaSemana">
+                <h1>Animes de la semana:</h1>
                 <ul>
-                  <li><Link to="/jojos"><img src="../img/Flecha_icono.png" alt="Flecha" />Jojos</Link></li>
-                  <li><Link to="/baki"><img src="../img/Flecha_icono.png" alt="Flecha" />Baki</Link></li>
-                  <li><Link to="/dragonsuper"><img src="../img/Flecha_icono.png" alt="Flecha" />Dragon ball Super</Link></li>
-                  <li><Link to="/pokemon"><img src="../img/Flecha_icono.png" alt="Flecha" />Pokemon</Link></li>
+                  <li><Link to="/jojos"><img src="../img/Flecha_icono.png" alt="Flecha" /><span>Jojos</span></Link></li>
+                  <li><Link to="/baki"><img src="../img/Flecha_icono.png" alt="Flecha" /><span>Baki</span></Link></li>
+                  <li><Link to="/dragonsuper"><img src="../img/Flecha_icono.png" alt="Flecha" /><span>Dragon Ball Super</span></Link></li>
+                  <li><Link to="/pokemon"><img src="../img/Flecha_icono.png" alt="Flecha" /><span>Pokemon</span></Link></li>
                 </ul>
               </div>
             </aside>
@@ -151,8 +141,8 @@ class Recomendaciones extends Component {
           <BarraRecomendaciones AlternarReco={this.AlternarReco} />
         </div>
       </div>
-    )
-  };
+    );
+  }
 }
 
 export default Recomendaciones;

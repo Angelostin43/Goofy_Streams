@@ -10,16 +10,16 @@ class Footer extends Component {
             <p><strong>2023-2023 Goofy Streams</strong></p>
           </div>
           <div id="Redes">
-            <a onClick={ReproducirAjio} href="https://www.facebook.com" target="_blank">
+            <a onClick={ReproducirAjio} href="https://www.facebook.com" target="_blank" rel="noreferrer">
               <img src="../img/facebook.png" alt="Facebook" id="ImagenRedes" />
             </a>
-            <a onClick={ReproducirAjio} href="https://www.X.com" target="_blank">
+            <a onClick={ReproducirAjio} href="https://www.X.com" target="_blank" rel="noreferrer">
               <img src="../img/X.avif" alt="X" id="ImagenRedes" />
             </a>
           </div>
         </footer>
       </div>
-    )
+    );
   }
 }
 
