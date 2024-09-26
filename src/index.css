@@ -1,0 +1,636 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: url(../public/img/Goofy.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/*Header*/
+
+header {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+  padding: 10px;
+}
+
+/*Cabecera*/
+
+#Cabecera    {
+  width: 80%;
+  height: auto;
+  float: left;
+  margin:0 10% 0 10%;
+  background-color: orangered;
+  background-image: url(../public/img/CabecerayPie.avif);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#Titulo {
+  flex: 1;
+  padding-left: 2%;
+  display: inline-block;
+  cursor: pointer;
+} 
+
+.imgTitulo {
+  width: 120%;
+  height: auto;
+  padding: 5px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+#Busqueda {
+  flex: 5;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  
+}
+
+#TextoBusqueda {
+  width: 85%;
+  padding: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: Arial, sans-serif; 
+  color: #333; 
+  border: 2px solid orangered; 
+  border-radius: 5px; 
+  outline: none;
+}
+
+#IconoBuscar {
+  width: 30px;
+  height: auto;
+  float: left;
+  cursor: pointer;
+}
+
+#ImagenUsuario {
+  margin-right: 10px;
+  width: 60px;
+  height: auto;
+  cursor: pointer;
+}
+
+/*Botones del la cabecera*/
+
+#BotonesTitulo {
+  display: flex;
+  gap: 15px;
+}
+
+#BotonIniciarSesion {
+  width: 60%; 
+  padding: 5px; 
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+/*Desplegables*/
+
+#Desplegables {
+  width: 80%;
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+}
+
+.cuadro {
+  width: 18%;
+  padding: 10px;
+  margin: 0;
+  text-align: center;
+  color: white;
+  background-image: url(../public/img/FonfoVerde.avif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 2px solid black;
+  position: relative;
+}
+
+.contenido {
+  color: white;
+  display: none; 
+  list-style-type: none;
+  padding: 0;
+  background-image: url(../public/img/FonfoVerde.avif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 2px solid black;
+  position: absolute;
+  left: 0; 
+  top: 61%;
+  width: 100%;
+  z-index: 1;
+}
+
+.menu {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.menu:hover + .contenido {
+  display: block;
+}
+
+.cuadro:hover .contenido {
+  display: block;
+}
+
+#Section {
+  width: 80%;
+  margin: 0 10% 0 10%;
+  position: relative;
+  background-image: url(../public/img/FondoNaranja.avif);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/*Banner*/
+
+.ImagenesBanner {
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.Banner {
+  width: 98%;
+  height: 400px;
+  margin: 2% auto;
+  border: 5px solid black;
+  box-shadow: 0px 0px 10px 2px black;
+  transition: 0.5s;
+}
+
+.Banner:hover {
+  filter: brightness(50%);
+}
+
+.linkbanners {
+  width: 95%;
+  height: 400px;
+}
+
+.navImage1 {
+  transform: rotateY(180deg);
+  cursor: pointer;
+  width: 50px;
+}
+
+.navImage2{
+  cursor: pointer;
+  width: 50px;
+}
+
+.hr2 {
+  border: none;
+  border-top: 2px solid #000;
+  width: 85%;
+  margin-top: 5%;
+}
+
+/*Recomendaciones*/
+
+.RecomendacionesContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Recomendaciones {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 10px;
+  padding: 10px;
+  max-width: calc(150% - 10px);
+}
+
+#TituloReco {
+  margin-top: 0%;
+  margin-left: 22%;
+  color: wheat;
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+.Recomendaciones img {
+  width: calc(33% - 10px);
+  margin-bottom: 10px;
+}
+
+.imagenContainer {
+  width: calc(33% - 10px);
+  margin-bottom: 10px;
+}
+
+.imagenContainer img {
+  width: 100%;
+  box-shadow: 0px 0px 2px 2px black;
+}
+
+.Recomendaciones a {
+  display: block;
+  text-align: center;
+}
+
+.imagen {
+  width: calc(33% - 10px);
+  margin-bottom: 10px;
+}
+
+.BarraReco {
+  padding-left: 25%;
+}
+
+.BarraReco button{
+  cursor: pointer;
+  margin-left: 10px;
+  width: 50px;
+  background-image: url(../public/img/FonfoVerde.avif);
+}
+
+/*Aside*/
+
+#CuadroDerecha {
+  width: 80%;
+  background-image: url(../public/img/FonfoVerde.avif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 1px solid black; 
+  padding: 10px;
+  box-shadow: 0px 0px 10px 2px black;
+}
+
+.VideoTrailer {
+  width: 100%;
+}
+
+.DelaSemana a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  align-items: center;
+}
+
+.Delasemana h1{
+  color: wheat;
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+.DelaSemana img {
+  width: 20px;
+  height: 15px;
+  margin-left: 5px;
+  margin-right: 5px; 
+  vertical-align: middle;
+}
+
+.DelaSemana ul {
+  list-style: none;
+  padding: 0;
+}
+
+.DelaSemana li {
+  margin: 5px 0;
+}
+
+.DelaSemana span {
+  margin-right: 5px; 
+}
+
+/*Footer*/
+
+#Pie   {
+  width: 80%;
+  height: auto;
+  float: left;
+  margin:0 10% 0 10%;
+  background-color: orangered;
+  background-image: url(../public/img/Footer.avif);
+  background-size: cover;
+
+}
+
+#FooterParrafo{
+  margin-top: 10px;
+  flex: 1;
+  display: inline-block;
+  margin-left: 40%;
+}
+
+#Redes {
+  float: right;
+  height: auto;
+  padding-top: 2%;
+}
+
+#ImagenRedes {
+  width: 50px;
+  height: auto;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+
+
+/*Buscar*/
+
+#ResultadosBusqueda {
+  position: absolute; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 12%;
+  max-height: 300px;
+  overflow-y: auto;
+  margin-top: 31px;
+  margin-left: 28px;
+  padding: 10px;
+  border-radius: 5px;
+  background-image: url(../public/img/FonfoVerde.avif);
+  z-index: 2; 
+}
+
+#ResultadosBusqueda a {
+  text-decoration: none;
+  color: black;
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  font-size: 15px;
+  z-index: 3;
+}
+
+/*Contenido*/
+
+.TituloContenido {
+  margin-top: 0px;
+  padding-top: 20px;
+  text-align: center;
+  color: wheat;
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+.DescriContenido {
+  margin-left: 50px;
+  margin-right: 50px;
+  font-family: Verdana;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+.VideoContenido{
+  width: 60%;
+  margin-left: 215px;
+  margin-bottom: 50px;
+  border: 3px solid #000;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px 2px wheat;
+}
+
+hr {
+  border: none;
+  border-top: 2px solid #000;
+  width: 85%;
+  padding-bottom: 25px;
+  margin-bottom: 0px;
+}
+
+/*Ayuda*/
+
+#SeccionAyuda {
+  width: 100%;
+  text-align: center;
+}
+
+#SeccionCorreo {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#textderecha{
+  width: 350px;
+  height: 250px;
+  margin-right: 25px;
+  border: 5px solid blue;
+  border-radius: 50px;
+}
+
+#SeccionCorreo1 {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#textizquierda{
+  width: 350px;
+  height: 250px;
+  margin-right: 25px;
+  border: 5px solid blue;
+  border-radius: 50px;
+}
+
+.lol{
+  margin-right: 25px;
+}
+
+
+#ajustartext{
+  color: beige;
+  text-align: center;
+  font-size: 30px;
+  font-family: cursive;
+}
+
+#TituloAyuda {
+  margin-top: 0%;
+}
+
+.imgDos{
+  height: 250px;
+  margin-right: 10px;
+  margin-bottom: 30px;
+}
+
+#Relleno{
+  color: cyan;
+
+}
+
+/*Login*/
+
+#BotonIniciarSesion{
+  width: 60px;
+  height: 60px;
+  padding-top: 10px;
+  background-image: url(../public/img/FonfoVerde.avif);
+  background-color: rgb(255, 255, 255);
+  border-radius: 30px;
+  margin-right: 60px;
+}
+#BotonIniciarSesion:hover {
+  background-image: url(../public/img/EasterEgg.png); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 2px solid #4CAF50;
+ 
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  padding: 30px;
+  padding-top: 100px;
+  margin-left: 33%;
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1);
+}
+
+.login-form input[type='text'],
+.login-form input[type='password'] {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.login-form input[type='submit'] {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  background-image: url(../public/img/Goofy.png);
+  cursor: pointer;
+}
+
+#BotonRegistrarse {
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  background-image: url(../public/img/FonfoVerde.avif);
+  cursor: pointer;
+}
+
+/*Registro*/
+
+.registro-form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  padding: 30px;
+  padding-top: 100px;
+  margin-left: 33%;
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1);
+}
+
+.registro-form input[type='text'],
+.registro-form input[type='password'],
+.registro-form input[type='email'] {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.registro-form input[type='submit'] {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  background-image: url(../public/img/Goofy.png);
+  cursor: pointer;
+}
+
+/*Perfil*/
+
+.perfil-container {
+  align-items: center;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.perfil-container h1 {
+  color: #333;
+  font-size: 24px;
+  color: wheat;
+  font-size: 30px;
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+.perfil-container p {
+  font-size: 18px;
+  color: yellow;
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+.perfil-loading {
+  font-size: 24px;
+  text-align: center;
+  padding: 50px 0;
+}
+
+.GoofyTexto {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  font-size: 36px;
+  color: yellow;
+  text-shadow: 
+    -2px -2px 0 #000,  
+     2px -2px 0 #000,
+    -2px 2px 0 #000,
+     2px 2px 0 #000,
+    -6px -6px 0 orangered,  
+     6px -6px 0 orangered,
+    -6px 6px 0 orangered,
+     6px 6px 0 orangered,
+    -8px -8px 0 #000,  
+     8px -8px 0 #000,
+    -8px 8px 0 #000,
+     8px 8px 0 #000; 
+}
