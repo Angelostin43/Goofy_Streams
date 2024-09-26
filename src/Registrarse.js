@@ -8,7 +8,7 @@ class Registrarse extends Component {
       formData: {
         username: '',
         password: '',
-        confirmarPassword: '',
+        confirmarPassword: '', // Asegúrate de que este nombre sea consistente
         email: '',
       },
       redirigirLogin: false,
@@ -68,8 +68,8 @@ class Registrarse extends Component {
           />
           <input
             type="password"
-            name="confirmPassword"
-            value={formData.confirmPassword}
+            name="confirmarPassword" // Cambié esto para que coincida
+            value={formData.confirmarPassword} // Cambié esto para que coincida
             onChange={this.handleInputChange}
             placeholder="Confirmar contraseña"
             required
