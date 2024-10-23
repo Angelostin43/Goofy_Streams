@@ -11,13 +11,13 @@ class Ayuda extends Component{
             </div>
             <div id="SeccionCorreo"> 
             <figure className='lol'>
-                <p id='ajustartext'>Angelo@gmail.com</p>
+                <p id='ajustartext'>angeloztim@gmail.com</p>
                 <img id='textderecha' src="../img/CorreoGmail.png"></img>
             </figure>
             </div>
             <div id="SeccionCorreo1">
             <figure className='lol'>
-                <p id='ajustartext'>david@gmail.com</p>
+                <p id='ajustartext'>david@gmail.com (Correo no existente)</p>
                 <img id='textizquierda'src="../img/CorreoGmail.png"></img>
             </figure>
             </div>
